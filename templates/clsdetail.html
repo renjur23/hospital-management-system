@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block title %} Department {% endblock %} {% block content %}
+<div
+    style="
+        text-align: center;
+        position: relative;
+        top: 150px;
+        left: 450px;
+        width: 50%;
+        height: 200px;
+        background-color: green;
+    "
+>
+    <h1 style="color: white; padding-top: 10px">{{dept.department_name }}</h1>
+    <p style="color: white; padding-top: 20px">{{dept.department_description}}</p>
+</div>
+
+{% endblock %}

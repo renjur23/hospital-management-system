@@ -1,0 +1,40 @@
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+.left {
+    width: 200px;
+    padding: 20px;
+}
+
+.vl {
+    border-left: 1px solid #D3D3D3;
+    height: 100%;
+    margin: 0 20px;
+}
+
+.right {
+    width: 650px;
+    padding: 20px;
+}
+
+h5 {
+    margin-bottom: 20px;
+    color: blue; 
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.form-floating {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+}
+

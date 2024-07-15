@@ -1,0 +1,47 @@
+{% extends 'base.html' %} 
+{% block title %} Contact us {% endblock %} 
+{% block body_class %}background{% endblock %}
+{% block content %} 
+{% load static %}
+<h1 style="color: blue;text-align:center;margin:20px;">Contact Us</h1>
+<div class="contact-container">
+    <div class="left">
+        <a href="#"><img src="{% static 'images/location.png' %}" /></a>
+        
+        <h6>Address</h6>
+        <p>Surkhet NP12 <br />Srendrenagar 06</p>
+        <br />
+        <a href="#"> <img src="{% static 'images/mobile.png' %}" /></a>
+        <h6>Phone</h6>
+        <p>+919048276261 <br />+917403365888</p>
+        <br/>
+        <a href="#"> <img src="{% static 'images/mail.png' %}"/></a>
+        <h6>Email</h6>
+        <p>codegrab@gmail.com<br />getcodegrab@gmail.com</p>
+    </div>
+    <div class="vl"></div>
+    <div class="right">
+        <h5>Send us a message</h5>
+        <p>
+            If you have any work from me or any types of queries related to my tutorial, you can send me 
+            a message from here. It's my pleasure to help you.
+        </p>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" name="name" placeholder="name" required  />
+                <label for="floatingInput">Enter your name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingEmail" name="mail_id" placeholder="email" required />
+                <label for="floatingEmail">Enter your email</label>
+            </div>
+            <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Comments" id="floatingTextarea" name="msg" style="height: 100px" required ></textarea>
+                <label for="floatingTextarea">Enter your message</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm">Send Now</button>
+        </form>
+        
+</div>
+{% endblock %}

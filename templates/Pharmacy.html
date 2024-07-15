@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block title %} Pharmacy{% endblock %} 
+{% block body_class %}pharma-background{% endblock %}
+{% block content %} {% load static %}
+<h1 style="color: blue;text-align:center;margin:20px;">Pharmacy</h1>
+<div class="container text-center" style="background-none;padding-top: 10px; padding-bottom: 10px">
+    {% for i in med %}
+    <div class="card" style="width: 18rem; text-align: center; display: inline-block; margin-left: 30px">
+        <a href="#"><img src="{{ i.med_image.url }}" class="card-img-top" style="height: 300px"; alt="..." /></a>
+        <div class="card-body">
+            <a href="#" style=" text-decoration:none"><p style="font-family: Georgia, serif; font-weight: bolder; font-size: large; color: blue" class="card-text">
+                 {{ i.med_name }}</a>
+            </p>
+            <p style="font-family:Georgia, serif;font-weight:normal;font-size:medium;color:black;"class="card-text">M.R.P:{{ i.med_amount }}.00</p>
+            <button type="button" class="btn view">View Details</button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

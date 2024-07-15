@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block title %} Doctors {% endblock %} 
+{% block body_class %}dr-background{% endblock %}
+{% block content %} {% load static %}
+<h1 style="color: blue;text-align:center;margin:20px;">Doctors</h1>
+<div class="container text-center" style="background-none;padding-top: 10px; padding-bottom: 10px">
+    {% for i in doctor %}
+    <div class="card" style="width: 18rem; text-align: center; display: inline-block; margin-left: 30px">
+        <a href="#"><img src="{{ i.doc_image.url }}" class="card-img-top" style="height: 300px" alt="..." /></a>
+        <div class="card-body">
+            <a href="#" style=" text-decoration:none"><p style="font-family: Georgia, serif; font-weight: bolder; font-size: large; color: blue" class="card-text">
+                Dr {{ i.doc_name }}</a>
+            </p>
+            <a href="#"style=" text-decoration:none"><h6>{{ i.department_name }} Department</h6></a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

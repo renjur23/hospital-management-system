@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block title %} Department {% endblock %}
+{% block body_class %}background{% endblock %}
+{% block content %} 
+<h1 style="color: blue;text-align:center;margin:20px;">Departments</h1>
+{% for i in dept %}
+
+<div
+    style="
+        text-align: center;
+        position: relative;
+        top: 50px;
+        left: 450px;
+        width: 50%;
+        height: 200px;
+        background-color:#7CB9E8;
+        border-style: solid;
+        border-color: white;
+        border-radius: 15px;
+    "
+>
+ <a href="#"style=" text-decoration:none"> <h1 style="color: black; padding-top: 10px;">{{ i.department_name}}</h1></a>
+ <a href="#"style=" text-decoration:none"> <p style="color: black; padding-top: 20px">{{ i.department_description}}</p></a>
+</div>
+{% endfor %} {% endblock %}
